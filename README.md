@@ -1,3 +1,1 @@
-### Hi,I'm IceFox🐭
-
-- 不要抱怨 尽量担待 不怕孤单 努力沉淀 
+![header](assets/header.svg)
