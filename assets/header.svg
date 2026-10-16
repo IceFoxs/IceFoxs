@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 480" width="100%" height="100%">
+  <defs>
+    <!-- 主背景：白色渐变 + 微冷色调 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="55%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#eef2ff" />
+    </linearGradient>
+
+    <!-- 顶部装饰线条 -->
+    <linearGradient id="topLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="35%" stop-color="#3b82f6" />
+      <stop offset="70%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- 左侧冷色光斑 -->
+    <radialGradient id="glowBlue" cx="20%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 右侧暖色光斑 -->
+    <radialGradient id="glowPurple" cx="85%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 右下角青色光斑 -->
+    <radialGradient id="glowCyan" cx="70%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 终端背景 -->
+    <linearGradient id="terminalBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- 网格图案：双层，形成透视感 -->
+    <pattern id="gridSmall" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0f172a" stroke-opacity="0.03" stroke-width="1" />
+    </pattern>
+    <pattern id="gridLarge" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#0f172a" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+
+    <!-- 发光线条效果 -->
+    <filter id="glowLine" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- 终端阴影 -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- 主背景 -->
+  <rect width="1560" height="480" rx="30" fill="url(#bgGradient)" />
+
+  <!-- 网格（小 + 大） -->
+  <rect width="1560" height="480" rx="30" fill="url(#gridSmall)" />
+  <rect width="1560" height="480" rx="30" fill="url(#gridLarge)" />
+
+  <!-- 三处光斑 -->
+  <rect width="1560" height="480" rx="30" fill="url(#glowBlue)" />
+  <rect width="1560" height="480" rx="30" fill="url(#glowPurple)" />
+  <rect width="1560" height="480" rx="30" fill="url(#glowCyan)" />
+
+  <!-- 顶部渐变线条（带发光） -->
+  <rect x="0" y="0" width="1560" height="6" fill="url(#topLineGradient)" filter="url(#glowLine)" />
+
+  <!-- 右上角装饰圆弧线条 -->
+  <path d="M 1200 60 Q 1400 100 1500 260" fill="none" stroke="#3b82f6" stroke-opacity="0.12" stroke-width="1.5" />
+  <path d="M 1260 40 Q 1460 90 1520 240" fill="none" stroke="#8b5cf6" stroke-opacity="0.10" stroke-width="1.5" />
+
+  <!-- ================= 左侧文本内容 ================= -->
+
+  <!-- 顶部标签 -->
+  <circle cx="145" cy="95" r="6" fill="#10b981" />
+  <text x="165" y="101" font-family="'Courier New', monospace" font-size="18" font-weight="600" fill="#64748b" letter-spacing="1.5">
+    ICEFOXS / GITHUB
+  </text>
+
+  <!-- 主标题 -->
+  <text x="140" y="220" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="96" font-weight="800" fill="#0f172a" letter-spacing="-1">
+    Hi, I'm IceFox.
+  </text>
+
+  <!-- 副标题 -->
+  <text x="145" y="280" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="36" font-weight="600" fill="#334155">
+    不要抱怨 尽量担待 不怕孤单 努力沉淀
+  </text>
+
+  <!-- 装饰横线（渐变发光） -->
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <line x1="145" y1="320" x2="245" y2="320" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" filter="url(#glowLine)" />
+
+  <!-- ================= 右侧终端窗口 ================= -->
+
+  <g transform="translate(920, 120)" filter="url(#shadow)">
+    <rect width="440" height="240" rx="12" fill="url(#terminalBg)" stroke="#334155" stroke-width="1.5" />
+
+    <!-- 顶部栏 -->
+    <path d="M 0 12 Q 0 0 12 0 L 428 0 Q 440 0 440 12 L 440 40 L 0 40 Z" fill="#1e293b" />
+    <line x1="0" y1="40" x2="440" y2="40" stroke="#334155" stroke-width="1" />
+
+    <!-- 红黄绿按钮 -->
+    <circle cx="25" cy="20" r="6" fill="#ef4444" />
+    <circle cx="45" cy="20" r="6" fill="#eab308" />
+    <circle cx="65" cy="20" r="6" fill="#22c55e" />
+
+    <!-- 窗口标题 -->
+    <text x="90" y="25" font-family="'Courier New', monospace" font-size="14" fill="#94a3b8">
+      ~/workspace
+    </text>
+
+    <!-- 终端内容 -->
+    <text x="25" y="85" font-family="'Courier New', monospace" font-size="20" fill="#10b981">$</text>
+    <text x="45" y="85" font-family="'Courier New', monospace" font-size="20" fill="#e2e8f0">whoami</text>
+
+    <text x="45" y="120" font-family="'Courier New', monospace" font-size="20" fill="#e2e8f0">
+      icefox / tool builder
+    </text>
+
+    <text x="45" y="155" font-family="'Courier New', monospace" font-size="20">
+      <tspan fill="#93c5fd">Java</tspan>
+      <tspan fill="#64748b"> · </tspan>
+      <tspan fill="#93c5fd">Go</tspan>
+      <tspan fill="#64748b"> · </tspan>
+      <tspan fill="#93c5fd">Rust</tspan>
+      <tspan fill="#64748b"> · </tspan>
+      <tspan fill="#93c5fd">Vue</tspan>
+    </text>
+
+    <!-- 提示符 + 光标 -->
+    <text x="25" y="195" font-family="'Courier New', monospace" font-size="20" fill="#10b981">$</text>
+    <rect x="45" y="178" width="12" height="22" fill="#2dd4bf" opacity="0.8" />
+  </g>
+</svg>
